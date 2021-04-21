@@ -1,4 +1,7 @@
-function gradePercent(){
+let btnCalculateGradePercent = document.querySelector('.btnCalculateGradePercent'),
+    btnClearForm = document.querySelector('.btnClearForm');
+    
+btnCalculateGradePercent.addEventListener('click', () => {
       let english = document.getElementById("english").value;
       let maths = document.getElementById("maths").value;
       let science = document.getElementById("science").value;
@@ -87,12 +90,12 @@ function gradePercent(){
           res.innerHTML = `Your Percent = ${percent.toFixed(2)}% <p>${failed}</p>`;
         }
       }      
-    }
+    });
 
-    function clearForm(){      
+    btnClearForm.addEventListener('click', () => {      
       document.getElementById("english").value = '';
       document.getElementById("maths").value = '';
       document.getElementById("science").value = '';
       document.getElementById("history").value = '';
       document.getElementById("res").style.display = 'none';
-    }
+    })

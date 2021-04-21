@@ -2,48 +2,65 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Student Grade Calculate</title>  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />  
+  <title>Javascript: Student Grade Calculate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
+  </head> 
 </head>
-<body style="background: #F1F1F1">
-  <div class="container d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
+<body>
+  <div class="wrapper">    
+    <div class="container">
 
-    <h1 class="display-1 text-danger mb-4">Student Grade Calculate</h1>
-    <form class="w-75">
+      <h1 class="display-3 text-danger">Student Grade Calculate</h1>
+      <p class="lead">Fill the obtained subject marks and check the grade 🙂!</p>   
+      
+      <form>
+        <div class="form-group">
+          <label><b>English</b></label>
+          <input type="text" id="english" class="form-control marks">
+          <p id="errorEnglish" class="text-danger"></p>
+        </div>
 
-      <div class="form-group">
-        <label><b>English</b></label>
-        <input type="text" id="english" class="form-control marks">
-        <p id="errorEnglish" class="text-danger"></p>
+        <div class="form-group">
+          <label><b>Maths</b></label>
+          <input type="text" id="maths" class="form-control marks">
+          <p id="errorMaths" class="text-danger"></p>
+        </div>
+
+        <div class="form-group">
+          <label><b>Science</b></label>
+          <input type="text" id="science" class="form-control marks">
+          <p id="errorScience" class="text-danger"></p>
+        </div>
+
+        <div class="form-group">
+          <label><b>History</b></label>
+          <input type="text" id="history" class="form-control marks">
+          <p id="errorHistory" class="text-danger"></p>
+        </div>        
+      </form>     
+
+      <div class="text-danger mb-4 text-center" style="font-size: 30px; font-weight: 600;" id="res"></div> 
+
+      <div>
+          <button class="btn btn-secondary btnClearForm">Clear</button> &nbsp; 
+          <button class="btn btn-danger btnCalculateGradePercent">Calculate</button>
       </div>
 
-      <div class="form-group">
-        <label><b>Maths</b></label>
-        <input type="text" id="maths" class="form-control marks">
-        <p id="errorMaths" class="text-danger"></p>
-      </div>
-
-      <div class="form-group">
-        <label><b>Science</b></label>
-        <input type="text" id="science" class="form-control marks">
-        <p id="errorScience" class="text-danger"></p>
-      </div>
-
-      <div class="form-group">
-        <label><b>History</b></label>
-        <input type="text" id="history" class="form-control marks">
-        <p id="errorHistory" class="text-danger"></p>
-      </div>        
-    </form>     
-
-    <div class="text-danger mb-4 text-center" style="font-size: 30px; font-weight: 600;" id="res"></div> 
-
-    <div>
-        <button onclick="clearForm()" class="btn btn-secondary">Clear</button> &nbsp; 
-        <button onclick="gradePercent()" class="btn btn-danger">Calculate</button>
     </div>
-
   </div>
-  <script src="custom.js"></script>    
+  <script src="script.js"></script>    
 </body>
 </html>
